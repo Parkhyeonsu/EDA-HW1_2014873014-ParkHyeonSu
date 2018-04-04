@@ -225,12 +225,20 @@ set.seed(1)
 m1=10
 m2=5
 num=0
-repeat{
-  x=rbinom(1,1,1/2)
-  print(x)
-  m1 <- if(x==1) m1 + 1 else m1 - 1
-  m2 <- if(x==1) m2 - 1 else m2 + 1
-  if(m1|m2=0) break
+for(i in 200)
+{
+  if(m1==0|m2==0)stop()
+  {
+    if(rbinom(1,1,1/2)==0)
+    {
+    m1=m1-1
+    m2=m2+1
+    }else{
+      m1=m1+1
+      m2=m2-1
+    }
+  }
+}
 }##루프 돌리는 방법을 잘 모르겠습니다ㅜㅜ
 
 #10-3
