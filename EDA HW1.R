@@ -120,8 +120,12 @@ for(i in 1:18)
 }
 
 #2
-a[which(a>=4)]
-which(a>=4)
+for(i in 1:18)
+{
+  a[i+2]=0.9*a[i+1]-0.1*a[i]+1
+  if(a[i]>=4)break
+  print(i)
+}
 
 #3
 A = matrix(runif(100),50,5)
